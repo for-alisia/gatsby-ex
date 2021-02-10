@@ -45,11 +45,37 @@ const ItemDescStyled = styled.div`
   pointer-events: none;
   width: 100%;
 
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    z-index: 2;
+    border: 1px solid #151515;
+    top: -10px;
+    left: -10px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    z-index: -1;
+    background-color: #c13b22;
+    top: -10px;
+    left: -10px;
+  }
+
   h4 {
-    padding: 1rem;
-    text-align: center;
+    margin: 0.7rem;
+    padding: 3px;
+    text-align: left;
+    background-color: rgba(21, 21, 21, 0.9);
     color: #f9f9f9;
-    background-color: #151515;
+    transform: translateY(-10px);
   }
 `
 

@@ -43,7 +43,32 @@ const ImgWrapperStyled = styled.div`
   }
 `
 
-const HtmlWrapperStyled = styled.div``
+const HtmlWrapperStyled = styled.div`
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: -1;
+    background-color: #c13b22;
+    bottom: -50px;
+    left: -55px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    z-index: -1;
+    background-color: #151515;
+    top: -58px;
+    right: -30px;
+  }
+`
 
 export default ({ data }) => {
   const post = data.markdownRemark
